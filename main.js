@@ -2,13 +2,13 @@ import { createElement, Component, render } from "./toy-react.js"
 
 class Square extends Component {
     render() {
-      return (
-        <button className="square" onClick={this.props.onClick}>
-          {this.props.value}
-        </button>
-      );
+        return (
+            <button className="square" onClick={this.props.onClick}>
+                {this.props.value}
+            </button>
+        );
     }
-  }
+}
 
 class Board extends Component {
     renderSquare(i) {
@@ -126,6 +126,9 @@ class Game extends Component {
 // ========================================
 
 render(<Game />, document.getElementById("root"));
+// let game = <Game />
+
+// console.log(game.vdom)
 
 function calculateWinner(squares) {
     const lines = [
